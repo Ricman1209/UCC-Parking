@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome-container {
+  position: absolute;
+  inset: 0;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.welcome-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-welcome {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.welcome-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0070b9;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.welcome-box button:hover {
+  background-color: #005b94;
+}
+
+.login-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  display: none;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #0070b9;
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #0070b9;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4b61e7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #3751c1;
+}
+
+.menu-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  display: none;
+}
+
+.registro-box {
+  border: 1.5px solid #ccc;
+  border-radius: 15px;
+  padding: 30px 20px 20px;
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.registro-header {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #0070b9;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+}
+
+.registro-opciones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.registro-botones {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-azul {
+  background-color: #0070b9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.btn-azul-mini {
+  background-color: #0070b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-rojo {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.btn-rojo-mini {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Estilo formulario alumno */
+.alumno-form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  display: none;
+}
+
+.form-box {
+  background-color: #64b7d2;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  max-width: 320px; /* Antes estaba en 420px */
+  margin: 0 auto;    /* Centrado */
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+  padding: 0 5px; /* Reduce separación interna horizontal */
+}
+
+legend {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Inputs blancos en formulario alumno */
+/* Ya los inputs están bien definidos en blanco */
+.alumno-form-container input,
+.alumno-form-container select {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 15px;
+  color: black;
+  width: 100%;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* Etiquetas encima de los campos */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.input-group label {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Por si el espacio es muy reducido */
+}
+
+.row .form-group {
+  flex: 1;
+}

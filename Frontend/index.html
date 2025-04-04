@@ -1,0 +1,108 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sistema Estacionamiento</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+    <!-- Pantalla de bienvenida -->
+    <div class="welcome-container" id="welcomePage">
+      <div class="welcome-box">
+        <img src="Logo_de_la_Universidad_Cristóbal_Colón.svg" alt="Logo UCC" class="logo-welcome">
+        <button onclick="mostrarLogin()">INICIAR SESIÓN</button>
+      </div>
+    </div>
+
+    <!-- Pantalla de login -->
+    <div class="login-container" id="loginPage">
+      <img src="Logo_de_la_Universidad_Cristóbal_Colón.svg" alt="Logo UCC" class="logo">
+      <h2>INICIAR SESIÓN</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Username" id="username" required>
+        <input type="password" placeholder="Password" id="password" required>
+        <button type="submit">INGRESAR</button>
+      </form>
+    </div>
+
+    <!-- Menú principal (guardia) -->
+    <div class="menu-container" id="menuPage">
+      <img src="Logo_de_la_Universidad_Cristóbal_Colón.svg" alt="Logo UCC" class="logo">
+
+      <div class="registro-box">
+        <div class="registro-header">Registro de&nbsp;&nbsp;nuevo usuario</div>
+        <div class="registro-opciones fila">
+          <button class="btn-azul-mini" id="btnAlumno">Alumno</button>
+          <button class="btn-azul-mini">Catedrático</button>
+        </div>
+      </div>
+
+      <div class="registro-botones">
+        <button class="btn-azul">Registrar visitante nuevo</button>
+        <button class="btn-azul">Registrar usuario temporal</button>
+        <button class="btn-rojo">Reportar problema</button>
+      </div>
+    </div>
+
+    <!-- Pantalla del formulario Alumno -->
+    <div class="alumno-form-container" id="alumnoPage" style="display: none;">
+      <img src="Logo_de_la_Universidad_Cristóbal_Colón.svg" alt="Logo UCC" class="logo">
+      <div class="form-box">
+        <form id="formAlumno">
+          <fieldset>
+            <legend>Datos del alumno</legend>
+            <div class="row">
+              <div class="form-group">
+                <label for="nombre">Nombre(s):</label>
+                <input type="text" id="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="matricula">Matrícula:</label>
+              <input type="text" id="matricula" required>
+            </div>
+            <div class="form-group">
+              <label for="licenciatura">Licenciatura:</label>
+              <input type="text" id="licenciatura" required>
+            </div>
+          </fieldset>
+    
+          <fieldset>
+            <legend>Datos del vehículo</legend>
+            <div class="form-group">
+              <label for="placa">Número de Placa:</label>
+              <input type="text" id="placa" required>
+            </div>
+            <div class="form-group">
+              <label for="color">Color del vehículo:</label>
+              <input type="text" id="color" required>
+            </div>
+            <div class="form-group">
+              <label for="marca">Marca del vehículo:</label>
+              <select id="marca" required>
+                <option disabled selected>Seleccione la marca del vehículo</option>
+                <option>Honda</option>
+                <option>Toyota</option>
+                <option>Chevrolet</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </fieldset>
+    
+          <div class="form-buttons">
+            <button type="submit" class="btn-azul-mini">Enviar</button>
+            <button type="button" class="btn-rojo-mini" onclick="cancelarAlumno()">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
