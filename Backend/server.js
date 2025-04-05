@@ -2,14 +2,22 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const PORT = 3000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Configuración de la base de datos
+// 🌐 Servir archivos estáticos del frontend
+app.use(express.static(path.join(__dirname, '../Frontend')));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Frontend/index.html'));
+});
+
+// 🛠️ Conexión a la base de datos
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -24,6 +32,7 @@ db.connect(err => {
         console.log('Conectado a MySQL');
     }
 });
+
 
 // 🏷️ Rutas de usuarios
 app.get('/usuarios', (req, res) => {
